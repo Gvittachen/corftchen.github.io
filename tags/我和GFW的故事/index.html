@@ -16,7 +16,7 @@
 	
     <title>
         
-          油猴脚本获取百度云下载直链 - Chen的博客 | Chen Blog
+          Chen的博客 | Chen Blog
         
     </title>
 	
@@ -29,7 +29,7 @@
 }
     </style>
 
-    <link rel="canonical" href="http://yoursite.com/2017/05/Violentmonkey/">
+    <link rel="canonical" href="http://yoursite.com/tags/我和GFW的故事/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,153 +153,7 @@
 
 
     <!-- Main Content -->
-    
-<!-- Image to hack wechat -->
-<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        background-image: url('/img/post-bg-js-module.jpg')
-    }
-</style>
-<header class="intro-header" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        
-                          <a class="tag" href="/tags/#工具" title="工具">工具</a>
-                        
-                          <a class="tag" href="/tags/#下载" title="下载">下载</a>
-                        
-                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
-                        
-                    </div>
-                    <h1>油猴脚本获取百度云下载直链</h1>
-                    <h2 class="subheading">百度云流氓?不存在的</h2>
-                    <span class="meta">
-                        Posted by Chen on
-                        2017-05-28
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>众所周知百度的尿性，近些年来更是嚣张的不得了，自上次国内的网盘大屠杀后，百度云可以说是国内网盘的老大了吧？百度云为了推广他的百度云管家，在网盘内或者分享页面下载大(10M-1G或者大于1G的都是大文件)文件的时候会强制下载使用百度云管家高速下载，对，就是那种 200Kb/s 的高速下载，不过，获取了百度云的下载直链，一切都不在话下。</p>
-</blockquote>
-<h3 id="关于-Violentmonkey"><a href="#关于-Violentmonkey" class="headerlink" title="关于 Violentmonkey"></a>关于 Violentmonkey</h3><p>油猴脚本 <a href="https://violentmonkey.github.io/" target="_blank" rel="external">官网</a></p>
-<h3 id="安装和使用"><a href="#安装和使用" class="headerlink" title="安装和使用"></a>安装和使用</h3><p>既然要用脚本，那我们就要先安装油猴扩展：<br>Chrome <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag" target="_blank" rel="external">扩展商店下载地址</a></p>
-<p>脚本更新地址：<a href="https://greasyfork.org/zh-CN/scripts/23635-%E7%99%BE%E5%BA%A6%E4%BA%91%E7%9B%B4%E6%8E%A5%E4%B8%8B%E8%BD%BD" target="_blank" rel="external">更新地址</a></p>
-<p>点击安装即可</p>
-<p>由于IDM、迅雷等多线程下载工具对浏览器监视的时候，HTTPS可能会导致无法捕获下载链接，所以需要安装 <a href="https://greasyfork.org/zh-CN/scripts/22208-%E9%98%BB%E6%AD%A2%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E8%B7%B3%E8%BD%AChttps" target="_blank" rel="external">阻止百度网盘跳转HTTPS地址</a></p>
-<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>我在安装使用的时候发现，选择文件后居然不显示下载助手，看了一下反馈区，都有这个问题</p>
-<h4 id="解决办法："><a href="#解决办法：" class="headerlink" title="解决办法："></a>解决办法：</h4><p>打开控制台，讲490行的代码</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div.'</span>+wordMap[<span class="string">'default-dom'</span>]+<span class="string">' div.'</span>+wordMap[<span class="string">'bar'</span>]+<span class="string">' div.'</span>+wordMap[<span class="string">'list-tools'</span>]).append($dropdownbutton);</div></pre></td></tr></table></figure>
-<p>改为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">'div.'</span>+wordMap[<span class="string">'list-tools'</span>]).append($dropdownbutton);</div></pre></td></tr></table></figure>
-
-
-                <hr>
-
-                
-
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2017/06/ShadowsocksR Edit Pac/" data-toggle="tooltip" data-placement="top" title="ShadowsocksR 手动添加编辑PAC文件">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                        <li class="next">
-                            <a href="/2017/02/我是如何在学校白吃白喝的/" data-toggle="tooltip" data-placement="top" title="我是如何在学校白吃白喝的">Next Post &rarr;</a>
-                        </li>
-                    
-                </ul>
-
-                
-
-                
-
-            </div>
-    <!-- Side Catalog Container -->
-        
-
-    <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-
-        </div>
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
-
-
+    <!-- Default Archive layout, we use archives instead. -->
 
     <!-- Footer -->
     <!-- Footer -->
