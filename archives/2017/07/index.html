@@ -16,7 +16,7 @@
 	
     <title>
         
-          ShadowsocksR 手动添加编辑PAC文件 - Chen的博客 | Chen Blog
+          Chen的博客 | Chen Blog
         
     </title>
 	
@@ -29,7 +29,7 @@
 }
     </style>
 
-    <link rel="canonical" href="http://yoursite.com/2017/06/ShadowsocksR Edit Pac/">
+    <link rel="canonical" href="http://yoursite.com/archives/2017/07/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,166 +153,7 @@
 
 
     <!-- Main Content -->
-    
-<!-- Image to hack wechat -->
-<!-- <img src="http://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        background-image: url('/img/post-bg-js-module.jpg')
-    }
-</style>
-<header class="intro-header" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        
-                          <a class="tag" href="/tags/#我和GFW的故事" title="我和GFW的故事">我和GFW的故事</a>
-                        
-                    </div>
-                    <h1>ShadowsocksR 手动添加编辑PAC文件</h1>
-                    <h2 class="subheading">我和 GFW 的故事..</h2>
-                    <span class="meta">
-                        Posted by Chen on
-                        2017-06-08
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                <h3 id="前文"><a href="#前文" class="headerlink" title="前文"></a>前文</h3><p>在ShadowsocksR中除了pac.txt文件以外 , 还会有一个 user-rule.txt 的文件 (如果没有就新建一个)</p>
-<p>这个人文件是单独给用户来添加网址规则的。所以只需要编辑这个文件就行了，</p>
-<p>毕竟 pac.txt 里面的内容太杂乱</p>
-<h3 id="user-rule-txt-文件"><a href="#user-rule-txt-文件" class="headerlink" title="user-rule.txt 文件"></a>user-rule.txt 文件</h3><p>这个文件可以通过 ShadowsocksR 目录打开 , 也可以通过 <code>右键Shadowsocks托盘图标 &gt; PAC &gt; 编辑 GFWList 的用户规则</code> 来打开</p>
-<p><strong>举个例子 :</strong></p>
-<p>比如访问 <code>baidu.com</code> 在这网址没有经过代理，那么将这个网址添加到 <code>GFWList 的用户规则</code> 里去</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">||baidu.com^</div></pre></td></tr></table></figure>
-<p>这个规则的意思是，任何以 <code>baidu.com</code> 为主的所有子域名包括自身 <code>http://</code> <code>https://</code> <code>ftp://</code>, 都走ShadowsocksR代理</p>
-<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ul>
-<li><p>编辑完 user-rule.txt 文件并保存后 , 右键ShadowsocksR托盘图标 &gt; PAC &gt; 更新PAC为 GFWList  , 否则不会生效的。</p>
-</li>
-<li><p>每一行规则末尾必须加上 <code>^</code> 符号 , 意思是这个规则在这个符号的地方结束。</p>
-</li>
-</ul>
-<h3 id="语法规则"><a href="#语法规则" class="headerlink" title="语法规则"></a>语法规则</h3><p><strong>通配符支持</strong></p>
-<p>比如：<code>*.example.com/*</code> 实际书写时可省略 <code>*</code> , <code>.example.com/</code> 和 <code>*.example.com/*</code> 效果一样</p>
-<p><strong>正则表达式支持</strong></p>
-<p>比如：以 <code>\</code> 开始和结束 , <code>\[\w]+:\/\/example.com\</code></p>
-<p><strong>例外规则：@@</strong></p>
-<p>比如：<code>@@*.example.com/*</code> 表示 <code>@@</code> 后面的网址规则不走代理</p>
-<p><strong>匹配地址开始和结尾规则：|</strong></p>
-<p>比如： <code>|http://example.com、example.com|</code> 分别表示以 <code>http://example.com</code> 开始和以 <code>example.com</code> 结束的地址</p>
-<p><strong>全匹配规则：||</strong></p>
-<p>比如： <code>||example.com</code> 则 <code>http://example.com</code> <code>https://example.com</code> <code>ftp://example.com</code> 等地址全部过滤</p>
-<p><strong>注释规则：!</strong></p>
-<p>任何以感叹号 <code>!</code> 开始的规则，都被视为注释。在过滤规则的列表中，仍然会显示这些规则</p>
-<p>比如：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">!我是注释</div><div class="line">||baidu.com^</div></pre></td></tr></table></figure>
-<p><strong>更多</strong></p>
-<p>更多user-rule.txt语法规则 , 参考 <a href="https://adblockplus.org/zh_CN/filters" target="_blank" rel="external">AdBlockPlus</a> 过滤规则</p>
-
-
-                <hr>
-
-                
-
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2017/07/ChinaPeople/" data-toggle="tooltip" data-placement="top" title="天朝民众的心理分析：圣君情结">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                        <li class="next">
-                            <a href="/2017/05/Violentmonkey/" data-toggle="tooltip" data-placement="top" title="油猴脚本获取百度云下载直链">Next Post &rarr;</a>
-                        </li>
-                    
-                </ul>
-
-                
-
-                
-
-            </div>
-    <!-- Side Catalog Container -->
-        
-
-    <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-
-        </div>
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
-
-
+    <!-- Default Archive layout, we use archives instead. -->
 
     <!-- Footer -->
     <!-- Footer -->
