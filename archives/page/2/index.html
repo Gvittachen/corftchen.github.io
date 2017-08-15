@@ -16,7 +16,7 @@
 	
     <title>
         
-          不过十行代码的爬虫爬取美女图 - Chen的博客 | Chen Blog
+          Chen的博客 | Chen Blog
         
     </title>
 	
@@ -29,7 +29,7 @@
 }
     </style>
 
-    <link rel="canonical" href="https://yoursite.com/2017/02/不过十行代码的爬虫爬取美女图/">
+    <link rel="canonical" href="https://yoursite.com/archives/page/2/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -153,151 +153,7 @@
 
 
     <!-- Main Content -->
-    
-<!-- Image to hack wechat -->
-<!-- <img src="https://yoursite.com/img/icon_wechat.png" width="0" height="0"> -->
-<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
-
-<!-- Post Header -->
-<style type="text/css">
-    header.intro-header{
-        background-image: url('/img/post-bg-js-module.jpg')
-    }
-</style>
-<header class="intro-header" >
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-heading">
-                    <div class="tags">
-                        
-                          <a class="tag" href="/tags/#美女" title="美女">美女</a>
-                        
-                          <a class="tag" href="/tags/#PHP" title="PHP">PHP</a>
-                        
-                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
-                        
-                    </div>
-                    <h1>不过十行代码的爬虫爬取美女图</h1>
-                    <h2 class="subheading"></h2>
-                    <span class="meta">
-                        Posted by Chen on
-                        2017-02-11
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-
-    <!-- Post Container -->
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                post-container">
-
-                <blockquote>
-<p>下滑这里查看更多内容</p>
-</blockquote>
-<p><strong>看了个帖子 <a href="https://zhuanlan.zhihu.com/p/24730075" target="_blank" rel="external">福利 - 不过百行代码的爬虫爬取美女图</a> 突然技痒，何用百行？</strong></p>
-<p>老夫复制粘贴就是上</p>
-<p>我们的目标是一个比较正规的 <a href="http://www.haha.mx/topic/1/new/" target="_blank" rel="external">福利网站</a></p>
-<h3 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h3><p>代码如下<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line"><span class="keyword">for</span> ($pageno = <span class="number">1</span> ; $pageno &lt; <span class="number">1848</span>; $pageno ++) &#123;</div><div class="line">    $content = file_get_contents(<span class="string">'http://www.haha.mx/topic/1/new/'</span>.$pageno);</div><div class="line">    preg_match_all(<span class="string">'/class=\"joke-main-img\" src=\"(.*?)\"/'</span>,$content,$matches);</div><div class="line">    <span class="keyword">foreach</span> ($matches[<span class="number">1</span>] <span class="keyword">as</span> $url) &#123;</div><div class="line">        $url = str_replace(<span class="string">'small'</span>,<span class="string">'big'</span>,$url);</div><div class="line">        $img = file_get_contents($url);</div><div class="line">        file_put_contents(<span class="string">'./save/'</span>.basename($url),$img);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>如果你仔细数的话，刚好十行。就这样，挺好的。</p>
-<p><strong>首先你要有PHP环境</strong>，然后把上面几行复制下来，粘贴到你随便起个名的php文件里,比如叫haha.php，然后保存，在这同级目录下，建个文件夹，叫 save ，用来存下载的图片。</p>
-<p>然后，用 php haha.php 直接运行。就行了。</p>
-<p>为了省行数，没有任何异常判断。是的，为了行数这些都省了，连输出进度都没有。（跑</p>
-
-
-                <hr>
-
-                
-
-                <ul class="pager">
-                    
-                        <li class="previous">
-                            <a href="/2017/02/我是如何在学校白吃白喝的/" data-toggle="tooltip" data-placement="top" title="我是如何在学校白吃白喝的">&larr; Previous Post</a>
-                        </li>
-                    
-                    
-                        <li class="next">
-                            <a href="/2017/02/从大唐荣耀到景甜/" data-toggle="tooltip" data-placement="top" title="从大唐荣耀到景甜">Next Post &rarr;</a>
-                        </li>
-                    
-                </ul>
-
-                
-
-                
-
-            </div>
-    <!-- Side Catalog Container -->
-        
-
-    <!-- Sidebar Container -->
-
-            <div class="
-                col-lg-8 col-lg-offset-2
-                col-md-10 col-md-offset-1
-                sidebar-container">
-
-                <!-- Featured Tags -->
-                
-
-                <!-- Friends Blog -->
-                
-            </div>
-
-        </div>
-    </div>
-</article>
-
-
-
-
-
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
-<script>
-    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
-        anchors.options = {
-          visible: 'always',
-          placement: 'right',
-          icon: '#'
-        };
-        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
-    })
-</script>
-<style>
-    /* place left on bigger screen */
-    @media all and (min-width: 800px) {
-        .anchorjs-link{
-            position: absolute;
-            left: -0.75em;
-            font-size: 1.1em;
-            margin-top : -0.1em;
-        }
-    }
-</style>
-
-
+    <!-- Default Archive layout, we use archives instead. -->
 
     <!-- Footer -->
     <!-- Footer -->
