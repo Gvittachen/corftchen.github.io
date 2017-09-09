@@ -6,9 +6,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
-	  <meta name="theme-color" content="#1e2327">
+	 <meta name="theme-color" content="#1e2327">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Chen's Blog | 寻香惊梦五更寒，Web & Android，Software Engineer，Google，摄影，映像Photograph | 这里是 @寻香惊梦—五更寒 的个人博客，一起发现更大的世界。">
+    <meta name="description" content="Chen's Blog | 寻香惊梦五更寒，Web & Android，Software Engineer，Google，摄影，映像Photograph |
+    这里是 @寻香惊梦—五更寒 的个人博客，一起发现更大的世界。">
     <meta name="keywords"  content="Chen's Blog, 博客, 个人网站, 互联网, Web,前端, 摄影，封锁的后花园，为所欲为">
     <link rel="shortcut icon" href="img/favicon.ico">
 
@@ -16,7 +17,7 @@
 
     <title>
         
-          我是如何在学校白吃白喝的 - Chen的博客 | Chen Blog
+          回忆2014年那些&quot;消失&quot;的网站 - Chen的博客 | Chen Blog
         
     </title>
 
@@ -29,7 +30,7 @@
 }
     </style>
 
-    <link rel="canonical" href="https://yoursite.com/2017/02/我是如何在学校白吃白喝的/">
+    <link rel="canonical" href="https://yoursite.com/2017/02/2014-website/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -163,7 +164,7 @@
 <!-- Post Header -->
 <style type="text/css">
     header.intro-header{
-        background-image: url('/img/roadchen01.jpg')
+        background-image: url('/img/post-bg-js-module.jpg')
     }
 </style>
 <header class="intro-header" >
@@ -173,18 +174,16 @@
                 <div class="post-heading">
                     <div class="tags">
                         
-                          <a class="tag" href="/tags/#生活" title="生活">生活</a>
+                          <a class="tag" href="/tags/#GFW" title="GFW">GFW</a>
                         
-                          <a class="tag" href="/tags/#RFID" title="RFID">RFID</a>
-                        
-                          <a class="tag" href="/tags/#安全" title="安全">安全</a>
+                          <a class="tag" href="/tags/#Google" title="Google">Google</a>
                         
                     </div>
-                    <h1>我是如何在学校白吃白喝的</h1>
-                    <h2 class="subheading">走近科学</h2>
+                    <h1>回忆2014年那些&quot;消失&quot;的网站</h1>
+                    <h2 class="subheading"></h2>
                     <span class="meta">
                         Posted by Chen on
-                        2017-02-15
+                        2017-02-03
                     </span>
                 </div>
             </div>
@@ -205,87 +204,11 @@
 
                 <blockquote>
 <p>下滑这里查看更多内容</p>
+<p>转自泡泡网，很不错的一个网站，可惜被墙了！</p>
 </blockquote>
-<h2 id="放在最前"><a href="#放在最前" class="headerlink" title="放在最前"></a>放在最前</h2><p>这一次我们来讲安全。</p>
-<p><strong>如果你只想看结果的话请</strong> <a href="#cg">点击这里</a></p>
-<p><strong>RFID技术</strong>：无线射频识别技术，是一种通信技术，可通过无线电讯号识别特定目标并读写相关数据，而无需识别系统与特定目标之间建立机械或光学接触。</p>
-<p>熟知的还有 <strong>NFC</strong> 技术</p>
-<p>我是2015年入手这张饭卡，而Mifare卡是在2009年被破解的，如今，其简陋的加密措施更是让M1慢慢的退出历史舞台…不过对于学校来说，<strong>不强求，不在意，能用就行</strong> 这才是坠好的</p>
-<blockquote>
-<p><em>目前多数的 Mifare 卡都被换成了安全性更高的 CPU卡，只有极少数旧系统或者对安全性要求不高的系统还在使用。而且就算是使用了 Mifare 卡都会采取更加强大的加密措施，如一卡一密或者更加复杂的算法。</em></p>
-</blockquote>
-<p>从高一入学开始，我就对学校的饭卡很好奇，更是想研究研究整个学校的支付系统。之前一直忘了这件事，今天突然想起来就想折腾一下。</p>
-<p>本篇文章只做讨论参考，加上许多不可告人的原因详细步骤就不写出来了 (我可不想被抓去喝茶)</p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>通过学校饭卡的充值和消费方式，判断可能是采取手动离线采集或者网络上传，目前多是采取网络上传，但又不能完全依赖于网络</p>
-<p>先拿出Mifare Classic tool来验证一下. 嗯，的确是M1的卡。</p>
-<p><img src="http://oksgmkdeu.bkt.clouddn.com/Screenshot_20170105-221715.png" alt="fankadate"></p>
-<p>再来看一下卡的扇区情况</p>
-<p><img src="http://oksgmkdeu.bkt.clouddn.com/Screenshot_20170214-201814.png" alt="fankadate2"></p>
-<p>通过检测，说明 0-4 扇区的秘钥和其他扇区不一样。</p>
-<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><ul>
-<li><p>ACR 122U 港版</p>
-</li>
-<li><p>Nexus 6 (开启NFC)</p>
-</li>
-<li><p>饭卡一张</p>
-</li>
-</ul>
-<blockquote>
-<p>这里面ACR122U在网上不超过两百CNY就能买到，可见其犯罪成本之低</p>
-</blockquote>
-<p>饭卡写真</p>
-<p><img src="http://oksgmkdeu.bkt.clouddn.com/IMG_20170214_203242.jpg" alt="fanka1"></p>
-<p><img src="http://oksgmkdeu.bkt.clouddn.com/IMG_20170214_203234.jpg" alt="fanka2"></p>
-<h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>从网上收集了一些资料 顺便看了看<a href="">M1卡的结构</a>有了较为清晰的思路，可以开始了</p>
-<ol>
-<li><p>ACR 122U 连上电脑，并搭建运行环境</p>
-</li>
-<li><p>安装 ACR 122U 驱动和SDK</p>
-</li>
-</ol>
-<p>每张 M1 卡都有一个全球唯一的 UID 号，这个 UID 号保存在卡的第一个扇区（0 扇区）的第一段（0 段），也称为厂商段，其中前 4 个字节是卡的 UID，第 5 个字节是卡 UID 的校验位，剩下的是厂商数据。并且这个段在出厂之前就会被设置了写入保护，只能读取不能修改，当然也有例外，有种叫 UID 卡的特殊卡，UID 是没有设置保护的，其实就是厂家不按规范生产的卡，M1 卡出厂是要求要锁死 UID 的</p>
-<ul>
-<li><p><a href="https://s1.boby.im/other/MF1S50YYX.pdf" target="_blank" rel="external">飞利浦M1卡官方结构分析</a></p>
-</li>
-<li><p><a href="http://s1.boby.im/other/rfid-practice.pdf" target="_blank" rel="external">高频IC卡指北</a></p>
-</li>
-</ul>
-<p>之前我用 MCT 自带的常见密钥访问饭卡，发现1-5扇区使用的不是默认密钥，被加密了，对于这种情况，我采取验证漏洞把其他扇区密码破解出来 (Shadow检测也能跑key出来，运气好的话两个小时)</p>
-<p>M1 卡常见秘钥：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">FFFFFFFFFFFF</div><div class="line">A0A1A2A3A4A5</div><div class="line">D3F7D3F7D3F7</div><div class="line">000000000000</div><div class="line">A0B0C0D0E0F0</div><div class="line">A1B1C1D1E1F1</div><div class="line">B0B1B2B3B4B5</div><div class="line">4D3A99C351DD</div><div class="line">1A982C7E459A</div><div class="line">AABBCCDDEEFF</div><div class="line">B5FF67CBA951</div><div class="line">714C5C886E97</div><div class="line">587EE5F9350F</div><div class="line">A0478CC39091</div><div class="line">533CB6C723F6</div><div class="line">24020000DBFD</div><div class="line">000012ED12ED</div><div class="line">8FD0A4F256E9</div><div class="line">EE9BD361B01B</div></pre></td></tr></table></figure></p>
-<p>验证漏洞<code>*</code>可以用 mfoc，mfoc 在Windows上的版本叫做mfocgui。程序使用非常简单，可以说是傻瓜式的操作方式，只有一个按钮，就是开始破解。在读卡器列表那里已经识别出我的ACR 122U了，做好心理准备所以可以开始了，接下来就是等待破解密钥…</p>
-<blockquote>
-<p><code>*</code> : M1卡破解方式的一种 包括 ( 重放攻击 , 克隆卡片 , 密钥流窃听 , 验证漏洞 )</p>
-</blockquote>
-<p>不用很久，就能看到所有扇区都被打勾了，破解成功<br>然后根目录就会生成一个这张饭卡的dump文件 ，到这里，整张饭卡就被读取出来了</p>
-<p><em>由于mfoc原本运行在Linux环境下，移植到Windows下的dump文件不能直接使用，需要用到 fixdump工具修复才行</em></p>
-<p>打开cmd：</p>
-<p>执行 <code>fixdump file.dump</code> 命令修复</p>
-<p>修复完成后用UltraEdit之类的十六进制编辑器打开编辑</p>
-<p>知道密码后，我将密码导入 MCT 的字典中，开始读取饭卡数据…紧接着跑到小卖部，消费一次，手机读一次，数据分析可方便了呢</p>
-<blockquote>
-<p>在这过程中，一种更加简单粗暴的方法也由此诞生了，Mifare Classic tool的功能就是<strong>读写标签</strong><br>没错，不仅能读还能写，如果你有一张 白卡(市场价一元左右) 的话，将你的的数据写入白卡，然后你就有一张新的可用的饭卡了，用完在清空再写入，日复一日如此循环….恭喜你，警察叔叔已经在路上了。</p>
-</blockquote>
-<p><strong>慢慢的，开始了白吃白喝的第一步</strong></p>
-<p></p><p id="cg"></p><p></p>
-<h2 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h2><p>本人也比较低调，改了一个比较正常的余额</p>
-<p><img src="http://oksgmkdeu.bkt.clouddn.com/IMG_20170216_172830.jpg" alt="成果"></p>
-<blockquote>
-<p>由于各种原因，我不能写出更多详细的东西，以上内容只做演示，余额已经改回来了,我可不想被抓去喝茶</p>
-</blockquote>
-<h2 id="放在最后"><a href="#放在最后" class="headerlink" title="放在最后"></a>放在最后</h2><p>俗话说，道高一尺，魔高一丈，有计策就有对策，以下的内容我送给学校的管理方面</p>
-<ol>
-<li><p>更换更安全的CPU卡，现在 CPU 卡可以模拟M1<br>卡格式，但安全系数比逻辑加密的 M1 安全的多</p>
-</li>
-<li><p>使用一卡一密，并且保证扇区全加密</p>
-</li>
-<li><p>将系统设置成联网校验，联网校验是目前最安全的一种智能卡操作模式，可以很好的保护卡片数据</p>
-</li>
-</ol>
-<p>其实比起各种卡，我更喜欢使用手机的 NFC 支付，但是毕竟能用到这种支付方式的学校不是一般的学校</p>
-<blockquote>
-<p>最后，告诉大家一句话：技术成就生活</p>
-</blockquote>
-<p><strong>你来我们学校，我请你吃饭</strong></p>
+<h2 id="默哀"><a href="#默哀" class="headerlink" title="默哀"></a>默哀</h2><p><strong>2014年对中国网民来说，是禁令不断、灾难不断的一年。为你整理出那些因为各种原因，在2014年“被消失”的网站、微信号、美剧、名人大V等。</strong></p>
+<p><img src="http://oksgmkdeu.bkt.clouddn.com/kp-03.jpg" alt="tupian"></p>
+<p>看完也我想到了文字狱，感触颇深！</p>
 
 
                 <hr>
@@ -295,12 +218,12 @@
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/2017/05/Violentmonkey/" data-toggle="tooltip" data-placement="top" title="油猴脚本获取百度云下载直链">&larr; Previous Post</a>
+                            <a href="/2017/02/Twitter-Dynamic-effect/" data-toggle="tooltip" data-placement="top" title="Twitter的like动画实现">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/2017/02/不过十行代码的爬虫爬取美女图/" data-toggle="tooltip" data-placement="top" title="不过十行代码的爬虫爬取美女图">Next Post &rarr;</a>
+                            <a href="/2017/02/GitBash-theme/" data-toggle="tooltip" data-placement="top" title="GitBash的自定主题">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
