@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <link rel="shortcut icon" href="/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <mate name="theme-color" content="#1e2327">
+    <meta name="description" content="如一 | CROFT，腐草化为萤,蚍蜉预渡海,眼底望得完却涉不过的一片无量海,不如在混沌里,放肆到只剩梦的余骸">
+    <meta name="keywords"  content="如一 | CROFT，腐草化为萤,蚍蜉预渡海,眼底望得完却涉不过的一片无量海,不如在混沌里,放肆到只剩梦的余骸">
+    <title>
+        
+          Home | CROFT
+        
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!--这是个坑-->
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+    <!--这是个坑-->
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+    <!--这是个坑-->
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- ga & ba script hoook -->
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+
+    <!-- Goole Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106538448-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+
+      gtag('config', 'UA-106538448-1');
+    </script>
+
+    <!-- Baidu Analytics -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b9b066b8775e9cd8db12b8b3423bfc50";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Croftchen&#39;s Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/one/">如一</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/photos/">映像</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="https://corftchen.org/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/hm-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                    </div>
+                    <h1></h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by Chen on
+                        2019-02-21
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>低光源拍照時，照片容易出現許多雜訊，以手機來說，最大的雜訊來源就是光子進入鏡頭後自然產生的統計誤差(shot noise)，以及感光元件將光子的能量轉換為電荷再轉為電壓並放大後產生的雜訊(Read noise)，而這些雜訊就以SNR(訊號對雜訊比)來表示，<br>SNR越大，雜訊越少；SNR越小，雜訊越多，<br>而SNR又與曝光時間呈平方正比，所以通常拍夜景時，都是相機上腳架，開低ISO、長曝光，藉以減少雜訊。<br>但是對於一般人來說，拍個照還要帶個腳架多麻煩? 而HDR+的疊圖技術雖然可以用來拍到更好的低光源照片，但是如前文所說，它只能拍到亮度3 Lux以上的場景</p>
+<p>對於亮度更低的環境，便會出現問題，所以Night Sight用了以下幾個技術，並結合先前提到的HDR+，讓相機依舊能在0.3 Lux ~ 3 Lux的環境中拍出漂亮的照片:</p>
+<ol>
+<li>PSL</li>
+<li>motion metering</li>
+<li>AI填色(白平衡)</li>
+</ol>
+<p>首先是PSL(positive-shutter-lag)，Google在GCAM上使用了零快門延遲技術(Zero-Shutter-Lag, ZSL)，使的按下快門後即可馬上得到成像，而在Night Sight中，為了獲取更多的光線，PSL會等到使用者按下快門後才開始拍照片，而與HDR+相同的是，Night Sight也是一次拍多張圖片去做合成，而依據手機晃動的狀況(上腳架還是手持)，Night Sight會拍攝15張曝光1/15秒(或更短)的照片~6張曝光1秒的照片，但是拍攝過程中，手機必會出現晃動、偏移、場景變換的情況發生，雖然Pixel 3 / Pixel 2有著OIS(光學防手震)可以減緩晃動，但對於Night Sight這種長曝光的拍攝方法，光有OIS也是不夠的，有著OIS也只能把曝光時間拉長到1/8秒而已，但是Night Sight一次拍攝可能多達15張照片，OIS並不足夠，因此Google開發了motion metering。</p>
+<p>Motion metering是一個技術，藉由陀螺儀感測手機的移動，以及被拍攝物的動作，限制單幀快門時間使影像不要模糊，如以下這隻狗</p>
+<p>左邊是張Gif動圖(狗在搖頭)，中間這張圖是Motion metering功能被關閉時拍的，單幀曝光時間為73mS，導致模糊，而右邊則是開啟Motion metering，單幀曝光時間被降到48mS，有著較少的晃動。<br>而既然Motion metering減緩了單幀成像的模糊，接下來則是解釋Google如何做到矯正及合併，傳統的疊圖就是把多張圖片的像素取平均，減少噪點，然而這種方法無法克服手震，Google將HDR+中的合併圖片演算法家加以強化，加強影像錯位的排除，且針對低光源環境優化，而由於Google Pixel 3有著更好的處理器，故在Pixel 3上，Google用上了Super Res Zoom的技術去加強照片，因為此技術也可減少噪點、提升細節，無論拍攝時是否有變焦。</p>
+<p>而Night Sight最後的挑戰是白平衡，自動白平衡(Auto white balancing, AWB)在低光源環境下會失效，是因為在昏暗的環境中，相機很難去判斷真實的顏色為何，導致無法矯正圖片的色彩，因此Google使用AI去訓練演算法判斷白平衡、填色，所以其實Night Sight已經不是單純的拍照片了，甚至可以說，Night Sight是數位作畫。</p>
+<p>傳統的拍照模式<br>傳統的相機、手機拍照的方式就是調整好iso、快門後，再經由硬體電路，如:ISP，做處理(去馬賽克、伽馬校正、降噪、白平衡、銳化、調色…)，然而隨著手機的處理器性能越來越強大，許多廠商開始運用手機的運算能力，將硬體規格的比拚轉向演算法的精進。</p>
+<p>Google Camera的演算法 - HDR+<br>Google Pixel的HDR+就是一個很好的計算攝影的例子，HDR+是Google開發的一種演算法，增強照片的動態範圍，藉以改善低光源拍照、避免高光過曝。傳統的HDR是拍多張過曝、欠曝、正常曝光的照片去合成，但這種算法會造成部分高光區域過曝、暗部過多雜訊，使的HDR演算法難以去做疊圖，造成鬼影…</p>
+<p>而HDR+的原理是一次拍攝多張欠曝的圖片(9~15張)，不同於傳統的HDR是由多張欠曝/過曝/正常曝光的照片所組成，Google的HDR+可同時保留高光及低光區域，再透過疊圖將暗部的雜訊移除</p>
+<p>不過HDR+當然不是單純的將照片疊起來而已，為了避免手震帶來的影響，演算法會仔細比對各個照片中的每個區域，將偏移的圖片拉回，並將莫名出現的物體去掉。而除了影像位置矯正，HDR+還會決定要保留多少亮部及暗部，避免出現太假的圖片，例如 :</p>
+<p>而為了保證零快門延遲，在打開Google Camera後，它會自動開始捕捉畫面存到環形緩衝區 ( 環形緩衝區會不斷地刪除舊照片，以讓出空間給新照片 ) ，當按下快門後，再對之前儲存的畫面去做合成，達成零延遲快門。且搭配Google Pixel內置的Pixel Visual Core，加速運算速度，之所以說加速，是因為HDR+仍可支援沒有Pixel Visual Core的Pixel 1、NEXUS、其他手機…所以可推測，Pixel Visual Core僅是加速運算用。</p>
+<p>而為了保證用戶能夠及時預覽畫面，每張照片會被限制快門時間至66mS，讓取景器能有至少15fps的畫面更新率。</p>
+<p>而由於HDR+會一次疊很多張圖，也使的Google Camera能拍出比傳統拉高ISO/快門時間還要清晰的夜景圖，但是HDR+只能在亮度3 Lux以上的環境發揮作用，低於3 Lux，HDR+無法拍出正常的圖片，所以Google在今年11月推出了新功能 – Night Sight ，以解決極限低光源拍照的問題。</p>
+
+
+                <hr>
+
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2018/11/iOSHEIC/" data-toggle="tooltip" data-placement="top" title="iOS HEIC Performance">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+
+                
+
+                <!-- Disqus -->
+                <div id="disqus_thread"></div>
+                <script>
+                (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://stromchen-1.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+                <!-- Disqus end -->
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+
+                <!-- Friends Blog -->
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                    <li>
+                        <a target="_blank" href="https://twitter.com/ChenCroft">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/whatchen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/-RoadChen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/Gvittachen">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Croftchen&#39;s Blog 2019
+                    <br>
+                    Theme by <a href="https://huangxuan.me"> Hux </a>
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span>
+                    Ported by <a href="https://corftchen.org/one/">Chen</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=kaijun&repo=hexo-theme-huxblog&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!--
+     Because of the native support for backtick-style fenced code blocks
+     right within the Markdown is landed in Github Pages,
+     From V1.6, There is no need for Highlight.js,
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://corftchen.org/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+<!-- Side Catalog -->
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="https://corftchen.org/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+</body>
+
+</html>
