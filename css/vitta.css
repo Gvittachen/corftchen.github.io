@@ -14,6 +14,7 @@ html {
 }
 
 body {
+	font-family: Didot, "Didot LT STD", "Bodoni MT", "ltc-bodoni-175", "Hoefler Text", Garamond, "Times New Roman", serif;
 	min-height: 100vh;
 	color: #57585c;
 	color: var(--color-text);
@@ -21,6 +22,7 @@ body {
 	overflow: hidden;
 }
 
+/* Color schemes */
 .vitta {
 	--color-text: #fff;
 	--color-link: #fff;
@@ -48,18 +50,28 @@ a:focus {
 }
 
 .frame__title {
-	font-family: skia;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	font-size: 1.5rem;
 	margin: 0 0 1rem;
 	font-weight: normal;
 }
 
-.frame_for{
+.frame__links {
 	display: inline;
 }
 
-.frame_for a:not(:last-child) {
+.frame__demos a:not(:last-child) {
 	margin-right: 1rem;
+}
+
+.frame__demos {
+	margin: 1rem 0;
+}
+
+.frame__demo--current,
+.frame__demo--current:hover {
+	text-decoration: underline;
+	color: var(--color-link);
 }
 
 .content {
@@ -72,9 +84,7 @@ a:focus {
 	align-items: center;
 }
 
-
 .content__title {
-	font-family: AppleMyungjo,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -109,7 +119,7 @@ a:focus {
 		grid-template-areas: 'title title ... '
 							'... ... ...'
 							'github demos links';
-	}
+}
 	.frame__title-wrap {
 		grid-area: title;
 		display: flex;
@@ -118,8 +128,7 @@ a:focus {
 		font-size: 20pt;
 		margin: 0;
 	}
-
-	.frame_for {
+	.frame__for {
 		padding: 0;
 		justify-self: end;
 	}
